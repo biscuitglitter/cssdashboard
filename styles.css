@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #e2e8f0;
+}
+
+.container {
+  display: grid;
+  grid-template: 150px 200px 200px 200px / 200px 300px 300px 200px;
+}
+
+.sidebar {
+  grid-row-start: 1;
+  grid-row-end: 6;
+  background-color: #1992d4;
+  color: #fff;
+}
+
+header {
+  background-color: #fff;
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+
+main {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.left-side {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    grid-template: 150px 150px 150px / 200px 400px 200px;
+  }
+  
+.right-side {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+  
+.wrapper {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+  
+
+.card {
+  background-color: #fff;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+  background-color: #e2e8f0;
+  padding: 5px;
+  width: 450px;
+}
+
+.icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
