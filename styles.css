@@ -17,7 +17,7 @@ body {
 
 .container {
   display: grid;
-  grid-template: 150px 200px 200px 200px / 200px 300px 300px 200px;
+  grid-template: 160px 200px 200px 200px / 200px 300px 300px 200px;
 }
 
 .sidebar {
@@ -25,12 +25,34 @@ body {
   grid-row-end: 6;
   background-color: #1992d4;
   color: #fff;
+  padding: 20px;
 }
 
 header {
   background-color: #fff;
   grid-column-start: 2;
   grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+  display: grid;
+  grid-template: 80px 80px / 800px 315px;
+}
+
+.search-area {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 20px;
+}
+
+.user-greeting {
+    padding: 20px;
+}
+
+.login-area {
+    padding: 20px;
 }
 
 main {
@@ -42,15 +64,17 @@ main {
 }
 
 .left-side {
+    padding: 25px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
     display: grid;
-    grid-template: 150px 150px 150px / 200px 400px 200px;
-  }
+    grid-template: 400px 350px / 200px 400px 200px;
+}
   
 .right-side {
+    padding: 20px;
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -61,18 +85,41 @@ main {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-}
-  
+    width: 750px;
+}  
 
 .card {
   background-color: #fff;
   padding: 20px 20px 20px 20px;
   border-radius: 10px;
+  min-width: 270px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+}
+
+.card.project {
+    display: grid;
+    grid-template: 90px 90px / 10px 288px;
+    height: 180px;
+    padding: 0;
+}
+
+.yellow-line {
+    background-color: #FACC15;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.project-info {
+    grid-column-start: 2;
+    grid-column-end: 3;  
+    padding: 20px;  
 }
 
 li {
@@ -82,6 +129,7 @@ li {
 a {
   text-decoration: none;
   color: #fff;
+  font-weight: bolder;
 }
 
 input {
@@ -89,7 +137,7 @@ input {
   border: none;
   background-color: #e2e8f0;
   padding: 5px;
-  width: 450px;
+  width: 550px;
 }
 
 .icons-container {
@@ -98,3 +146,16 @@ input {
     justify-content: flex-end;
 }
 
+button {    
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #0d6efd;
+    font-weight: 400;
+    border: 1px solid #0d6efd;
+    padding: 8px 8px;
+    font-size: 14px;
+    border-radius: 20px;
+    width: 70px;
+    font-weight: bold;
+}
