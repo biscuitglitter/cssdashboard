@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@300&display=swap');
 *,
 *::before,
 *::after {
@@ -8,7 +7,7 @@
 
 * {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Gantari', sans-serif;
 }
 
 body {
@@ -61,18 +60,13 @@ main {
   grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 5;
+  padding: 25px;
 }
 
 .left-side {
-    padding: 25px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    display: grid;
-    grid-template: 400px 350px / 200px 400px 200px;
+  width: 750px;
 }
-  
+
 .right-side {
     padding: 20px;
     grid-column-start: 2;
@@ -87,23 +81,22 @@ main {
     grid-row-start: 1;
     grid-row-end: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    width: 750px;
+    /* border: 3px solid pink; */
 }  
 
 .card {
   background-color: #fff;
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
   border-radius: 10px;
-  min-width: 270px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
 }
 
 .card.project {
     display: grid;
-    grid-template: 90px 90px / 10px 288px;
+    grid-template: 9fr 9fr / 1fr 21fr 14.5fr;
     height: 180px;
     padding: 0;
 }
@@ -118,8 +111,27 @@ main {
 
 .project-info {
     grid-column-start: 2;
-    grid-column-end: 3;  
+    grid-column-end: 4;  
     padding: 20px;  
+}
+
+.icons-container {
+  padding: 10px;
+  display: inline-grid;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.project-info > h3 {
+  padding-bottom: 10px;
+}
+
+.icon {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  cursor: pointer;
 }
 
 li {
@@ -138,12 +150,6 @@ input {
   background-color: #e2e8f0;
   padding: 5px;
   width: 550px;
-}
-
-.icons-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
 }
 
 button {    
